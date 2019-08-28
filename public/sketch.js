@@ -10,6 +10,7 @@ const tiles = L.tileLayer(tileUrl, { attributions, maxZoom: 19, minZoom: 15, id:
 
 tiles.addTo(miMap);
 
+showIt();
 async function showIt() {
 	const localesData = await getData();
 	//console.log(localesData);
@@ -56,7 +57,7 @@ async function showIt() {
 }
 
 async function getData() {
-	const response = await fetch('locales');
+	const response = await fetch('localesData.csv');
 	console.log(response);
 	const data = await response.text();
 
@@ -86,8 +87,6 @@ async function getData() {
 	return locales;
 	console.log(locales);
 }
-
-showIt();
 
 
 
