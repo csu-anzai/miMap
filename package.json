@@ -20,5 +20,13 @@
     "proyect"
   ],
   "author": "Esteban Rosano & Felipe Caillabet",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kitorosano/miMap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kitorosano/miMap/issues"
+  },
+  "homepage": "https://github.com/Kitorosano/miMap#readme"
 }
