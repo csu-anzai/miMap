@@ -63,7 +63,7 @@
 			for (local of localesData) {
 
 				const localIcon = L.icon({
-					iconUrl: '../icons/' + local.type + '.png',
+					iconUrl: 'Icons/' + local.type + '.png',
 					iconSize: [30, 30],
 					popupAnchor: [-3, -76]
 				});
@@ -101,7 +101,7 @@
 		}
 
 		async function getData() {
-			const response = await fetch('../localesData.csv');
+			const response = await fetch('localesData.csv');
 			const data = await response.text();
 
 			const locales = [];
