@@ -22,15 +22,15 @@ app.get('/api', (request, response) => {
         response.json(data);
     });
 })
-app.get('/locales', async (request, response) => {
-    const api_key = process.env.LOCALES_KEY
-    const url = `https://spreadsheets.google.com/feeds/list/${api_key}/od6/public/values?alt=json`;
-    $.getJSON(url, data => {
-        console.log(data);
-    })
-    const response = await fetch(url);
-    const data = await response.json();
+// app.get('/locales', async (request, response) => {
+//     const api_key = process.env.LOCALES_KEY
+//     const url = `https://spreadsheets.google.com/feeds/list/${api_key}/od6/public/values?alt=json`;
+//     $.getJSON(url, data => {
+//         console.log(data);
+//     })
+//     const response = await fetch(url);
+//     const data = await response.json();
 
-    response.json(data);
-    console.log(data);
-})
+//     response.json(data);
+//     console.log(data);
+// })
