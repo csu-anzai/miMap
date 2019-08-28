@@ -54,7 +54,7 @@
 		const tiles = L.tileLayer(tileUrl, { attributions, maxZoom: 19, minZoom: 15, id: 'mapbox.streets', accessToken: 'pk.eyJ1Ijoia2l0b3Jvc2FubyIsImEiOiJjang0dXN0Z3gwZHBxNDRrajl0eWJnbWV1In0._JKXocT10c_LMSNjiRUEZw' });
 
 		tiles.addTo(miMap);
-
+         
 		async function showIt() {
 			const localesData = await getData();
 			//console.log(localesData);
