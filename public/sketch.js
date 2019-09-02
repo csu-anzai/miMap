@@ -57,8 +57,7 @@ async function showIt() {
 }
 
 async function getData() {
-	const response = await fetch('localesData.csv');
-	console.log(response);
+	const response = await fetch('localesData');
 	const data = await response.text();
 
 	const locales = [];

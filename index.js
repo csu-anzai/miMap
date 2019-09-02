@@ -22,15 +22,11 @@ app.get('/api', (request, response) => {
         response.json(data);
     });
 })
-// app.get('/locales', async (request, response) => {
-//     const api_key = process.env.LOCALES_KEY
-//     const url = `https://spreadsheets.google.com/feeds/list/${api_key}/od6/public/values?alt=json`;
-//     $.getJSON(url, data => {
-//         console.log(data);
-//     })
-//     const response = await fetch(url);
-//     const data = await response.json();
+app.get('/localesData', async (request, response) => {
+    const api_key = '2PACX-1vSsOWCs5vSr5AKBFzDtkOzVfPFl3t3npUW1NP4wvEnZvgZmlz6uo59NuxHMf-kyAfewYr3wznkpFpw6';//process.env.LOCALES_KEY
+    const url = `https://docs.google.com/spreadsheets/d/e/${api_key}/pub?output=csv`;
+    const url_response = await fetch(url);
+    const url_data = await url_response.text();
 
-//     response.json(data);
-//     console.log(data);
-// })
+    response.send(url_data);
+});
